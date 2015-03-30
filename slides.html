@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<head>
+		<title>GROUP THINK slides</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+		<link rel="stylesheet" href="slides.css" type="text/css" media="screen" >		
+	</head>
+	<body>
+			<div id="viewport">
+				<ul>
+					<li>slide 1</li>
+					<li>slide 2</li>
+					<li>slide 3</li>
+					<li>slide 4</li>
+					<li>slide 5</li>
+				</ul>
+				<a id="simplePrevious"></a>
+				<a id="simpleNext"></a>		
+			</div>
+
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="jquery-infinite-carousel/jquery.infinite-carousel.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#viewport').carousel('#simplePrevious', '#simpleNext');  
+			
+			function slide(){
+			  $('#simpleNext').click();
+			}
+			//Launch the scroll every 10 seconds
+			var intervalId = window.setInterval(slide, 10000);
+
+			//On user click deactivate auto-scrolling
+			$('#previous, #simpleNext').click(
+			 function(event){
+			  if(event.originalEvent){
+			   window.clearInterval(intervalId);
+			  }
+			 }
+			);
+		});
+		</script>	
+	</body>
+</html>

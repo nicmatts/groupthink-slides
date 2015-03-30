@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#viewport{
+	width: 100%; 
+	overflow:hidden; /* Hides extra elements, those outside the viewport area */
+	margin: 0;
+}
+#viewport ul{
+	position: relative; /* Enables positionning of elements inside viewport */
+	padding: 0; /* Resets default - User Agent - style */
+}
+#viewport li{
+	width: 1240px; /* Defines the size of inner element */
+	height: 800px;
+	float: left; /* Places list items side by side*/
+	list-style: none; /* Resets default - User Agent - style */
+	
+	border: 1em solid black;
+	margin: 0;
+	padding: 5px;
+	text-align:center;
+}
+
+/* Cosmetic */
+#simplePrevious, #simpleNext{
+	cursor: pointer;
+	font-size: 0.8em;
+	text-decoration: underline;	
+}

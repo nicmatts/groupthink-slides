@@ -1,6 +1,7 @@
 body {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	max-width: 1270px;
 }
 
 #viewport{
@@ -14,11 +15,11 @@ body {
 }
 #viewport li{
 	width: 1240px; /* Defines the size of inner element */
-	height: 800px;
+	height: 600px;
 	float: left; /* Places list items side by side*/
 	list-style: none; /* Resets default - User Agent - style */
 	
-	border: 1em solid black;
+	border: 10px solid black;
 	margin: 0;
 	padding: 5px;
 	text-align:center;
